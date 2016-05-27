@@ -1,10 +1,7 @@
-FROM node:4.2.2
+FROM iron/node:5.10.1
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY package.json /usr/src/app/
-RUN npm install
-COPY . /usr/src/app
+WORKDIR /app
+ADD . /app
 
 EXPOSE 8080
 
